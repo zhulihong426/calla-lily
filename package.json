@@ -1,0 +1,14 @@
+{
+  "name": "lihong-risograph-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "主立红个人作品集网站",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
+}

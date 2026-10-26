@@ -1,0 +1,62 @@
+/* Risograph Global Styles */
+
+:root {
+  --riso-pink: #ff6b9d;
+  --riso-blue: #2563eb;
+  --riso-orange: #ff8a00;
+  --riso-green: #22c55e;
+  --riso-paper: #fffbf0;
+}
+
+/* Grain texture overlay */
+.riso-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* Overprint offset */
+.riso-offset {
+  position: relative;
+}
+.riso-offset::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  color: var(--riso-blue);
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
+
+/* Halftone pattern */
+.riso-halftone {
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+@keyframes risograph-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes risograph-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.risograph-frosted {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 107, 157, 0.08);
+}
+
+.risograph-accent-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
+}
+
+.risograph-animate-in {
+  animation: risograph-fade-in 0.5s ease-out both;
+}

@@ -1,0 +1,297 @@
+- generic [active] [ref=e1]:
+  - link "跳至正文" [ref=e2] [cursor=pointer]:
+    - /url: "#about"
+  - banner [ref=e4]:
+    - link "返回首页" [ref=e5] [cursor=pointer]:
+      - /url: "#home"
+      - generic [aria-hidden] [ref=e6]: ZL
+      - generic [ref=e7]:
+        - text: ZHU LIHONG
+        - generic [ref=e8]: PORTFOLIO / 2026
+    - navigation "主导航" [ref=e9]:
+      - link "关于我" [ref=e10] [cursor=pointer]:
+        - /url: "#about"
+      - link "作品" [ref=e11] [cursor=pointer]:
+        - /url: "#works"
+      - link "创作" [ref=e12] [cursor=pointer]:
+        - /url: "#creative"
+      - link "实习" [ref=e13] [cursor=pointer]:
+        - /url: "#internship"
+      - link "在校" [ref=e14] [cursor=pointer]:
+        - /url: "#campus"
+      - link "联系" [ref=e15] [cursor=pointer]:
+        - /url: "#contact"
+    - generic [ref=e16]: HARBIN, CN
+  - main [ref=e17]:
+    - region [ref=e18]:
+      - generic [aria-hidden] [ref=e21]: +
+      - generic [aria-hidden] [ref=e22]: +
+      - generic [aria-hidden] [ref=e23]: SPACE · PEOPLE · STORIES
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: independently minded VOL. 01 — 2026
+        - heading "Welcome to my world. Welcome to my world." [level=1] [ref=e26]
+        - link "ENTER MY WORLD" [ref=e27] [cursor=pointer]:
+          - /url: "#about"
+          - generic [aria-hidden] [ref=e29]: ↓
+      - generic [aria-hidden] [ref=e30]:
+        - generic [ref=e31]: DESIGN PORTFOLIO
+        - generic [ref=e33]: SCROLL TO EXPLORE
+        - generic [ref=e34]: 01 / 07
+    - region [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: 02 / 07
+          - generic [ref=e39]:
+            - paragraph [ref=e40]: A LITTLE ABOUT ME
+            - heading "认识我." [level=2] [ref=e41]
+          - paragraph [ref=e42]: BE CURIOUS.STAY SINCERE.
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - paragraph [ref=e45]:
+              - text: 我相信，好的设计不仅被看见，更应该
+              - mark [ref=e46]: 被真实地感受到。
+            - paragraph [ref=e47]: 环境设计的学习经历，让我习惯从人的行为与情绪出发，思考空间、光线和材质之间的关系。从餐饮空间到非遗展厅，我享受把抽象想法一步步变成可进入、可体验的场景。
+            - paragraph [ref=e48]: 课堂之外，我也喜欢组织活动、处理现场问题。那些沟通、协作与随机应变的时刻，让我对「为人而设计」有了更具体的理解。
+            - generic [ref=e49]:
+              - generic [ref=e50]:
+                - generic [ref=e51]: EDUCATION
+                - strong [ref=e52]: 哈尔滨商业大学
+                - generic [ref=e53]: 环境设计 · 本科 · 2022—2026
+              - generic [ref=e54]:
+                - generic [ref=e55]: TOOLKIT
+                - strong [ref=e56]: 从想法到空间
+                - generic [ref=e57]: AutoCAD / SketchUp / Enscape / Photoshop
+            - generic "个人特质" [ref=e58]:
+              - generic [ref=e59]: SPACE
+              - generic [ref=e60]: DETAIL
+              - generic [ref=e61]: EMPATHY
+          - figure "主立红个人照片，鼠标悬停或点击可让照片清晰" [ref=e62]:
+            - img "主立红个人照片" [ref=e65]
+            - generic [ref=e68]:
+              - generic [ref=e69]: HOVER TO FOCUS
+              - generic [ref=e71]: ME, OFF DUTY.
+    - region [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 03 / 07
+          - generic [ref=e76]:
+            - paragraph [ref=e77]: SELECTED WORKS
+            - heading "作品合集." [level=2] [ref=e78]
+          - paragraph [ref=e79]: HOVER TO PREVIEWCLICK TO READ MORE
+        - generic [ref=e80]:
+          - generic "作品列表" [ref=e81]:
+            - link "01 中华小厨 餐饮空间设计 / INTERIOR 2025" [ref=e82] [cursor=pointer]:
+              - /url: project.html?work=01
+              - generic [ref=e83]: "01"
+              - generic [ref=e84]:
+                - strong [ref=e85]: 中华小厨
+                - generic [ref=e86]: 餐饮空间设计 / INTERIOR
+              - generic [ref=e87]: "2025"
+              - generic [aria-hidden] [ref=e88]: ↗
+            - link "02 D&H 设计工作室 办公空间设计 / WORKPLACE 2025" [ref=e89] [cursor=pointer]:
+              - /url: project.html?work=02
+              - generic [ref=e90]: "02"
+              - generic [ref=e91]:
+                - strong [ref=e92]: D&H 设计工作室
+                - generic [ref=e93]: 办公空间设计 / WORKPLACE
+              - generic [ref=e94]: "2025"
+              - generic [aria-hidden] [ref=e95]: ↗
+            - link "03 白族文化非遗展厅 展示空间设计 / EXHIBITION 2025" [ref=e96] [cursor=pointer]:
+              - /url: project.html?work=03
+              - generic [ref=e97]: "03"
+              - generic [ref=e98]:
+                - strong [ref=e99]: 白族文化非遗展厅
+                - generic [ref=e100]: 展示空间设计 / EXHIBITION
+              - generic [ref=e101]: "2025"
+              - generic [aria-hidden] [ref=e102]: ↗
+            - link "04 俞卄咖啡馆 建筑与空间设计 / ARCHITECTURE 2025" [ref=e103] [cursor=pointer]:
+              - /url: project.html?work=04
+              - generic [ref=e104]: "04"
+              - generic [ref=e105]:
+                - strong [ref=e106]: 俞卄咖啡馆
+                - generic [ref=e107]: 建筑与空间设计 / ARCHITECTURE
+              - generic [ref=e108]: "2025"
+              - generic [aria-hidden] [ref=e109]: ↗
+            - link "05 锦岸风华 居住空间设计 / RESIDENTIAL 2025" [ref=e110] [cursor=pointer]:
+              - /url: project.html?work=05
+              - generic [ref=e111]: "05"
+              - generic [ref=e112]:
+                - strong [ref=e113]: 锦岸风华
+                - generic [ref=e114]: 居住空间设计 / RESIDENTIAL
+              - generic [ref=e115]: "2025"
+              - generic [aria-hidden] [ref=e116]: ↗
+            - link "06 玄黑 · 彩梦 儿童沉浸式非遗体验馆 / IMMERSIVE 2026" [ref=e117] [cursor=pointer]:
+              - /url: project.html?work=06
+              - generic [ref=e118]: "06"
+              - generic [ref=e119]:
+                - strong [ref=e120]: 玄黑 · 彩梦
+                - generic [ref=e121]: 儿童沉浸式非遗体验馆 / IMMERSIVE
+              - generic [ref=e122]: "2026"
+              - generic [aria-hidden] [ref=e123]: ↗
+          - complementary "作品主图预览" [ref=e124]:
+            - generic [aria-hidden] [ref=e125]: +
+            - link "查看中华小厨作品详情" [ref=e126] [cursor=pointer]:
+              - /url: project.html?work=01
+              - img "中华小厨餐饮空间主图预览" [ref=e127]
+              - generic [ref=e128]: VIEW PROJECT ↗
+            - generic [ref=e129]:
+              - generic [ref=e130]: 01 / 06
+              - generic [ref=e131]: MAIN VISUAL
+    - region [ref=e132]:
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: 04 / 07
+          - generic [ref=e136]:
+            - paragraph [ref=e137]: POSTER & PHOTOGRAPHY
+            - heading "平面与影像." [level=2] [ref=e138]
+          - paragraph [ref=e139]: TWO WAYSTO TELL STORIES.
+        - generic [ref=e140]:
+          - button "查看海报设计详情" [ref=e141] [cursor=pointer]:
+            - generic [ref=e143]: 01 / 02 · CAMPUS EVENTS
+            - heading "POSTER_DESIGN" [level=3] [ref=e144]
+            - paragraph [ref=e145]: 以鲜明主视觉和清晰的信息层级，为校园活动建立从预热到报名的传播路径。
+            - generic [ref=e146]: 点击查看详情 ↗
+          - button "查看摄影详情" [ref=e147] [cursor=pointer]:
+            - generic [ref=e149]: 02 / 02 · VISUAL NOTES
+            - heading "PHOTOGRAPHY" [level=3] [ref=e150]
+            - paragraph [ref=e151]: 记录城市夜色、港口日光与传统建筑，在光、影和色彩之间保留现场的呼吸。
+            - generic [ref=e152]: 点击查看详情 ↗
+    - region [ref=e153]:
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: 05 / 07
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: LEARNING BY DOING
+            - heading "实习经历." [level=2] [ref=e159]
+          - paragraph [ref=e160]: FROM PAPERTO REAL LIFE.
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: 把图纸放进真实现场，也把反馈带回设计。
+            - generic [ref=e164]:
+              - strong [ref=e165]: 100+
+              - generic [ref=e166]: 累计设计出图 / 张
+          - generic [ref=e168]:
+            - article [ref=e169]:
+              - generic [ref=e170]:
+                - time [ref=e171]: 2025.12 — 2026.03
+                - generic [ref=e172]: "01"
+              - generic [ref=e173]:
+                - paragraph [ref=e174]: 室内设计师助理
+                - heading "德州乾艺装饰材料有限公司" [level=3] [ref=e175]
+                - list [ref=e176]:
+                  - listitem [ref=e177]: 参与方案设计与效果图制作，运用 SketchUp、Enscape、CAD 累计出图 100 余张。
+                  - listitem [ref=e178]: 结合客户预算与材料工艺提出设计建议，持续评估并优化方案。
+                  - listitem [ref=e179]: 跟进项目进展，协助处理设计与施工中的衔接问题。
+            - article [ref=e180]:
+              - generic [ref=e181]:
+                - time [ref=e182]: "2025.01"
+                - generic [ref=e183]: "02"
+              - generic [ref=e184]:
+                - paragraph [ref=e185]: 室内设计师助理
+                - heading "同轩装修装饰工程有限公司" [level=3] [ref=e186]
+                - list [ref=e187]:
+                  - listitem [ref=e188]: 协助设计师理解并整理客户需求，参与方案设计及效果图制作。
+                  - listitem [ref=e189]: 从可实施性出发协助评估方案，提出调整与优化建议。
+                  - listitem [ref=e190]: 在协作中跟进项目进度，保障设计表达与最终效果一致。
+    - region [ref=e191]:
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - generic [ref=e194]: 06 / 07
+          - generic [ref=e195]:
+            - paragraph [ref=e196]: CAMPUS EXPERIENCE
+            - heading "在校经历." [level=2] [ref=e197]
+          - paragraph [ref=e198]: PLAN · EXECUTEREVIEW.
+        - generic [ref=e199]:
+          - generic [aria-hidden] [ref=e200]: HUC
+          - generic [ref=e201]:
+            - paragraph [ref=e202]: 2022 — 2026
+            - heading "哈尔滨商业大学" [level=3] [ref=e203]
+            - generic [ref=e204]: 设计艺术学院 · 环境设计 · 本科（全日制）
+            - generic [ref=e205]: 主修课程：平面制图技术软件（86）/ 建筑装饰材料构造与施工工艺（90）/ 设计心理学（91）/ 图像处理技术软件（90）
+          - generic [ref=e206]:
+            - strong [ref=e207]:
+              - text: "84"
+              - generic [ref=e208]: /100
+            - generic [ref=e209]: 学业成绩 · 前 30%
+          - generic [ref=e210]:
+            - generic [ref=e211]: 制图 86
+            - generic [ref=e212]: 构造 90
+            - generic [ref=e213]: 心理 91
+            - generic [ref=e214]: 图像 90
+        - generic [ref=e215]:
+          - article [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e218]: 2024.03.25
+              - generic [ref=e219]: "01"
+            - paragraph [ref=e220]: 赛事组执行
+            - heading "「燃动青春 · 趣创精彩」 多人多足挑战赛" [level=3] [ref=e221]: 「燃动青春 · 趣创精彩」多人多足挑战赛
+            - list [ref=e222]:
+              - listitem [ref=e223]: 带领 3 人团队完成活动从 0 到 1 的策划、排期与落地执行。
+              - listitem [ref=e224]: 经实地测试将参赛人数由 10 人调整为 6 人，大幅降低连环摔倒风险。
+              - listitem [ref=e225]: 统筹现场执行，结合线上海报预热与线下宣传，实现社群裂变。
+            - generic [ref=e226]:
+              - strong [ref=e227]: "144"
+              - generic [ref=e228]: 参赛人数 · 完赛率超 95% · 0 重大安全事故
+          - article [ref=e229]:
+            - generic [ref=e230]:
+              - generic [ref=e231]: 2025.04 — 05
+              - generic [ref=e232]: "02"
+            - paragraph [ref=e233]: 策划设计组长
+            - heading "「艺苑杯」 校园十佳歌手大赛" [level=3] [ref=e234]: 「艺苑杯」校园十佳歌手大赛
+            - list [ref=e235]:
+              - listitem [ref=e236]: 独立负责整体方案策划与现场总控，确保活动全流程安全有序推进。
+              - listitem [ref=e237]: 搭建“主视觉海报 + 直播互动”立体宣发矩阵，联动班级群与线下宣传。
+              - listitem [ref=e238]: 推动活动话题在校园持续发酵，形成活动前、中、后的传播闭环。
+            - generic [ref=e239]:
+              - strong [ref=e240]: 10%+
+              - generic [ref=e241]: 活动报名覆盖率 · 学院在校生
+          - article [ref=e242]:
+            - generic [ref=e243]:
+              - generic [ref=e244]: 志愿服务
+              - generic [ref=e245]: "03"
+            - paragraph [ref=e246]: 现场执行 · 秩序维护
+            - heading "志愿服务" [level=3] [ref=e247]
+            - list [ref=e248]:
+              - listitem [ref=e249]: 负责单日 300+ 人次的现场检测与登记，在高强度人流压力下保持零失误。
+              - listitem [ref=e250]: 协助现场人流疏导与突发情况处理，有效降低拥堵风险。
+            - generic [ref=e251]:
+              - strong [ref=e252]: 300+
+              - generic [ref=e253]: 单日服务人次
+          - article [ref=e254]:
+            - generic [ref=e255]:
+              - generic [ref=e256]: 院学生会
+              - generic [ref=e257]: "04"
+            - paragraph [ref=e258]: 文艺部部长
+            - heading "院学生会干部" [level=3] [ref=e259]
+            - list [ref=e260]:
+              - listitem [ref=e261]: 统筹赛事 10+ 项，独立完成方案撰写、赛制规划、选手招募、资源对接等全流程工作。
+              - listitem [ref=e262]: 主持决赛并管控现场流程，妥善处理突发状况；活动后进行数据复盘与经验沉淀。
+            - generic [ref=e263]:
+              - strong [ref=e264]: 10+
+              - generic [ref=e265]: 任职期间统筹赛事 / 项
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - paragraph [ref=e269]: 07 / 07 · GET IN TOUCH
+        - generic [ref=e270]: THANKS FOR STOPPING BY.
+      - heading "LET'S CREATE SOMETHING GOOD." [level=2] [ref=e271]: LET'S CREATESOMETHING GOOD.
+      - link "2823979989@qq.com" [ref=e272] [cursor=pointer]:
+        - /url: mailto:2823979989@qq.com
+        - generic [aria-hidden] [ref=e274]: ↗
+      - generic [ref=e275]:
+        - link "PHONE / WECHAT 138 0534 8315" [ref=e276] [cursor=pointer]:
+          - /url: tel:13805348315
+          - generic [ref=e277]: PHONE / WECHAT
+          - strong [ref=e278]: 138 0534 8315
+        - generic [ref=e279]:
+          - generic [ref=e280]: BASED IN
+          - strong [ref=e281]: Shandong, China
+        - generic [ref=e282]:
+          - generic [ref=e283]: STATUS
+          - strong [ref=e284]: Open to new possibilities
+      - generic [ref=e285]:
+        - link "ZL BACK TO TOP ↑" [ref=e286] [cursor=pointer]:
+          - /url: "#home"
+          - generic [ref=e287]: ZL
+          - generic [ref=e288]: BACK TO TOP ↑
+        - paragraph [ref=e289]: © 2026 ZHU LIHONG. MADE WITH CURIOSITY & CARE.
+        - generic [ref=e290]: END / 07
