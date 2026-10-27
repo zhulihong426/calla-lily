@@ -112,10 +112,10 @@ const creativeWorks = {
     ],
     layout: 'is-photography',
     images: [
-      { src: 'assets/img/photo-bridge-night.png', caption: '江桥夜色', alt: '夜色中灯光映照的江桥' },
-      { src: 'assets/img/photo-harbor-ship.png', caption: '港口泊船', alt: '海面上停泊的大型货船' },
-      { src: 'assets/img/photo-sunset-bridge.png', caption: '落日桥影', alt: '落日逆光中的桥梁与水面' },
-      { src: 'assets/img/photo-plum-architecture.png', caption: '腊梅与古建', alt: '古建筑旁的腊梅树' }
+      { src: 'assets/img/photo-bridge-night.jpg', caption: '江桥夜色', alt: '夜色中灯光映照的江桥' },
+      { src: 'assets/img/photo-harbor-ship.jpg', caption: '港口泊船', alt: '海面上停泊的大型货船' },
+      { src: 'assets/img/photo-sunset-bridge.jpg', caption: '落日桥影', alt: '落日逆光中的桥梁与水面' },
+      { src: 'assets/img/photo-plum-architecture.jpg', caption: '腊梅与古建', alt: '古建筑旁的腊梅树' }
     ]
   }
 };
