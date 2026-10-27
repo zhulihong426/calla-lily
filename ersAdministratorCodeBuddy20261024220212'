@@ -1,0 +1,52 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex bd71114..10e7821 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -224,7 +224,7 @@[m
+ [m
+           <div class="timeline">[m
+             <article class="experience-item reveal">[m
+[31m-              <div class="experience-date"><time>2025.12 — 2026.03</time><span>01</span></div>[m
+[32m+[m[32m              <div class="experience-date"><time>2026.01 — 2026.03</time><span>01</span></div>[m
+               <div class="experience-body">[m
+                 <p class="experience-role">室内设计师助理</p>[m
+                 <h3>德州乾艺装饰材料有限公司</h3>[m
+[36m@@ -283,7 +283,7 @@[m
+             <ul class="campus-list">[m
+               <li>带领 3 人团队完成活动从 0 到 1 的策划、排期与落地执行。</li>[m
+               <li>经实地测试将参赛人数由 10 人调整为 6 人，大幅降低连环摔倒风险。</li>[m
+[31m-              <li>统筹现场执行，结合线上海报预热与线下宣传，实现社群裂变。</li>[m
+[32m+[m[32m              <li>统筹现场执行，结合线上海报预热与线下宣传，实现社群裂变。</li><li>产出 10+ 张高质量照片及 1 条播放量破 2000 的短视频。</li>[m
+             </ul>[m
+             <div class="campus-result"><strong>144</strong><span>参赛人数 · 完赛率超 95% · 0 重大安全事故</span></div>[m
+           </article>[m
+[36m@@ -293,9 +293,9 @@[m
+             <p class="campus-role">策划设计组长</p>[m
+             <h3>「艺苑杯」<br>校园十佳歌手大赛</h3>[m
+             <ul class="campus-list">[m
+[31m-              <li>独立负责整体方案策划与现场总控，确保活动全流程安全有序推进。</li>[m
+[32m+[m[32m              <li>主导设计艺术学院「艺苑杯」十佳歌手大赛，独立负责整体方案策划与现场总控，确保活动全流程安全有序推进。</li>[m
+               <li>搭建“主视觉海报 + 直播互动”立体宣发矩阵，联动班级群与线下宣传。</li>[m
+[31m-              <li>推动活动话题在校园持续发酵，形成活动前、中、后的传播闭环。</li>[m
+[32m+[m[32m              <li>推动活动话题在校园持续发酵。</li>[m
+             </ul>[m
+             <div class="campus-result"><strong>10%+</strong><span>活动报名覆盖率 · 学院在校生</span></div>[m
+           </article>[m
+[36m@@ -306,7 +306,7 @@[m
+             <h3>志愿服务</h3>[m
+             <ul class="campus-list">[m
+               <li>负责单日 300+ 人次的现场检测与登记，在高强度人流压力下保持零失误。</li>[m
+[31m-              <li>协助现场人流疏导与突发情况处理，有效降低拥堵风险。</li>[m
+[32m+[m[32m              <li>协助现场人流疏导与突发情况处理，有效降低拥堵风险，保障现场秩序井然。</li>[m
+             </ul>[m
+             <div class="campus-result"><strong>300+</strong><span>单日服务人次</span></div>[m
+           </article>[m
+[36m@@ -317,7 +317,7 @@[m
+             <h3>院学生会干部</h3>[m
+             <ul class="campus-list">[m
+               <li>统筹赛事 10+ 项，独立完成方案撰写、赛制规划、选手招募、资源对接等全流程工作。</li>[m
+[31m-              <li>主持决赛并管控现场流程，妥善处理突发状况；活动后进行数据复盘与经验沉淀。</li>[m
+[32m+[m[32m              <li>主持决赛并管控现场流程，妥善处理突发状况；活动后进行数据复盘与经验沉淀，持续优化活动模型。</li>[m
+             </ul>[m
+             <div class="campus-result"><strong>10+</strong><span>任职期间统筹赛事 / 项</span></div>[m
+           </article>[m
