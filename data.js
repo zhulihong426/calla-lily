@@ -7,15 +7,15 @@ window.PORTFOLIO_WORKS = [
     english: 'Chinese Restaurant',
     category: 'INTERIOR SPACE',
     year: '2025',
-    cover: '/assets/img/work01-cover.jpg',
+    cover: 'assets/img/work01-cover.jpg',
     description: '以中式古典元素为骨、烟火气为魂。实木家具与格栅屏风界定散客区与包厢，店内植竹引景，木饰面里藏一笔白色山水波纹。暖黄灯光与疏密得当的桌椅布局，共同兼顾就餐舒适度与私密性。',
     tags: ['SketchUp', 'Enscape', '材质与灯光', '功能分区'],
     fact: '木 · 竹 · 暖光',
     scope: '门头 / 前厅 / 大堂 / 包厢',
     images: [
-      { src: '/assets/img/work01-a.jpg', caption: '接待区 · 竹影', alt: '中华小厨前台接待区与竹景' },
-      { src: '/assets/img/work01-b.jpg', caption: '散座大厅 · 圆桌', alt: '中华小厨散座大厅圆桌区' },
-      { src: '/assets/img/work01-c.jpg', caption: '包厢 · 金叶屏风', alt: '中华小厨包厢与金叶屏风' }
+      { src: 'assets/img/work01-a.jpg', caption: '接待区 · 竹影', alt: '中华小厨前台接待区与竹景' },
+      { src: 'assets/img/work01-b.jpg', caption: '散座大厅 · 圆桌', alt: '中华小厨散座大厅圆桌区' },
+      { src: 'assets/img/work01-c.jpg', caption: '包厢 · 金叶屏风', alt: '中华小厨包厢与金叶屏风' }
     ]
   },
   {
@@ -26,15 +26,15 @@ window.PORTFOLIO_WORKS = [
     english: 'Design Studio',
     category: 'WORKPLACE',
     year: '2025',
-    cover: '/assets/img/work02-cover.jpg',
+    cover: 'assets/img/work02-cover.jpg',
     description: '以「创意赋能，设计共生」为理念的两层办公空间。黑白灰为基调，佐以跳脱的活力色；兼容办公、休息、洽谈与展示，结合自然采光提升通透感。配套完成平面布置、爆炸图与交通流线、光照、空气流动分析。',
     tags: ['AutoCAD', 'SketchUp', 'Enscape', '流线与光照'],
     fact: '黑白灰 + 活力色',
     scope: '两层空间 / 爆炸图 / 四类分析',
     images: [
-      { src: '/assets/img/work02-a.jpg', caption: '头脑风暴区', alt: 'D&H设计工作室头脑风暴会议室' },
-      { src: '/assets/img/work02-b.jpg', caption: '会议空间', alt: 'D&H设计工作室大会议室' },
-      { src: '/assets/img/work02-c.jpg', caption: '独立办公间', alt: 'D&H设计工作室主理人办公室' }
+      { src: 'assets/img/work02-a.jpg', caption: '头脑风暴区', alt: 'D&H设计工作室头脑风暴会议室' },
+      { src: 'assets/img/work02-b.jpg', caption: '会议空间', alt: 'D&H设计工作室大会议室' },
+      { src: 'assets/img/work02-c.jpg', caption: '独立办公间', alt: 'D&H设计工作室主理人办公室' }
     ]
   },
   {
@@ -45,15 +45,15 @@ window.PORTFOLIO_WORKS = [
     english: 'Bai Heritage Museum',
     category: 'EXHIBITION',
     year: '2025',
-    cover: '/assets/img/work03-cover.jpg',
+    cover: 'assets/img/work03-cover.jpg',
     description: '位于云南昆明晋宁区的三层非遗展厅。外立面以舒展的白色曲面呼应水的意象，内部用自然光与柔和灯光铺陈白族扎染、木刻版画等非遗叙事，并以文化共同体为线索串联展陈动线。',
     tags: ['展厅动线', '展陈叙事', '三层平面', '交通流线'],
     fact: '文化叙事 · 光的展厅',
     scope: '三层平面 / 展陈空间 / 流线分析',
     images: [
-      { src: '/assets/img/work03-c.jpg', caption: '展陈内景 · 版画', alt: '白族文化非遗展厅展陈内景' },
-      { src: '/assets/img/work03-a.jpg', caption: '序厅 · 服务区', alt: '白族文化非遗展厅序厅服务区' },
-      { src: '/assets/img/work03-b.jpg', caption: '服务台 · 智慧导览', alt: '白族文化非遗展厅服务台与导览设备' }
+      { src: 'assets/img/work03-c.jpg', caption: '展陈内景 · 版画', alt: '白族文化非遗展厅展陈内景' },
+      { src: 'assets/img/work03-a.jpg', caption: '序厅 · 服务区', alt: '白族文化非遗展厅序厅服务区' },
+      { src: 'assets/img/work03-b.jpg', caption: '服务台 · 智慧导览', alt: '白族文化非遗展厅服务台与导览设备' }
     ]
   },
   {
@@ -64,15 +64,15 @@ window.PORTFOLIO_WORKS = [
     english: 'Forest Cafe',
     category: 'ARCHITECTURE',
     year: '2025',
-    cover: '/assets/img/work04-cover.jpg',
+    cover: 'assets/img/work04-cover.jpg',
     description: '一座藏在林间的清水混凝土咖啡馆。以体块的切割、错动与悬挑生成建筑形态，围合出开放又亲密的院落；大开窗把树影与天光收进室内，营造现代工业感与温暖并存的停留体验。',
     tags: ['体块生成', '立面分析', '混凝土美学'],
     fact: '体块 · 光影 · 水泥',
     scope: '体块推演 / 建筑外观 / 立面分析',
     images: [
-      { src: '/assets/img/work04-a.jpg', caption: '外观 · 晨光', alt: '俞卄咖啡馆晨光中的建筑外观' },
-      { src: '/assets/img/work04-b.jpg', caption: '外观 · 黄昏', alt: '俞卄咖啡馆黄昏中的建筑外观' },
-      { src: '/assets/img/work04-c.jpg', caption: '体块生成分析', alt: '俞卄咖啡馆建筑体块生成分析图' }
+      { src: 'assets/img/work04-a.jpg', caption: '外观 · 晨光', alt: '俞卄咖啡馆晨光中的建筑外观' },
+      { src: 'assets/img/work04-b.jpg', caption: '外观 · 黄昏', alt: '俞卄咖啡馆黄昏中的建筑外观' },
+      { src: 'assets/img/work04-c.jpg', caption: '体块生成分析', alt: '俞卄咖啡馆建筑体块生成分析图' }
     ]
   },
   {
@@ -83,15 +83,15 @@ window.PORTFOLIO_WORKS = [
     english: 'Jin An Residence',
     category: 'RESIDENTIAL',
     year: '2025',
-    cover: '/assets/img/work05-cover.jpg',
+    cover: 'assets/img/work05-cover.jpg',
     description: '现代简约风全案：浅灰与米白为基调，深色柜体与大理石茶几压住层次；L 型布艺沙发与绿植带来松弛感，一体化书柜融合休闲与办公，大面积落地窗引入自然光。卧室延续同调材质，静谧而舒适。',
     tags: ['全屋定制', '软装搭配', '材质对比'],
     fact: '浅灰米白 · 深色柜体',
     scope: '客厅 / 餐厨 / 卧室',
     images: [
-      { src: '/assets/img/work05-a.jpg', caption: '客厅 · 酒柜', alt: '锦岸风华居住空间客厅与酒柜' },
-      { src: '/assets/img/work05-b.jpg', caption: '餐厨空间', alt: '锦岸风华居住空间厨房' },
-      { src: '/assets/img/work05-c.jpg', caption: '主卧 · 晨光', alt: '锦岸风华居住空间主卧' }
+      { src: 'assets/img/work05-a.jpg', caption: '客厅 · 酒柜', alt: '锦岸风华居住空间客厅与酒柜' },
+      { src: 'assets/img/work05-b.jpg', caption: '餐厨空间', alt: '锦岸风华居住空间厨房' },
+      { src: 'assets/img/work05-c.jpg', caption: '主卧 · 晨光', alt: '锦岸风华居住空间主卧' }
     ]
   },
   {
@@ -102,15 +102,15 @@ window.PORTFOLIO_WORKS = [
     english: 'Black Pottery, Color Dreams',
     category: 'IMMERSIVE SPACE',
     year: '2026',
-    cover: '/assets/img/work06-cover.jpg',
+    cover: 'assets/img/work06-cover.jpg',
     description: '毕业设计。以「从玄黑到彩梦」为隐性叙事：玄黑承载龙山黑陶渗碳工艺的千年积淀，彩梦象征儿童创造力在暗空间中被唤醒后的绚烂释放。通过互动感应、光疗逻辑与色彩心理学，构建沉浸式美育场域。',
     tags: ['沉浸式叙事', '色彩心理学', '剖面与施工图'],
     fact: '玄黑 → 彩梦',
     scope: '剖面 / 施工图 / 爆炸图 / 效果图',
     images: [
-      { src: '/assets/img/work06-a.jpg', caption: '玄黑展区 · 黑陶', alt: '玄黑彩梦体验馆黑陶展区' },
-      { src: '/assets/img/work06-b.jpg', caption: '互动展项 · 对焦黑陶', alt: '玄黑彩梦体验馆光感互动展区' },
-      { src: '/assets/img/work06-c.jpg', caption: '建筑剖面图', alt: '玄黑彩梦体验馆建筑剖面图' }
+      { src: 'assets/img/work06-a.jpg', caption: '玄黑展区 · 黑陶', alt: '玄黑彩梦体验馆黑陶展区' },
+      { src: 'assets/img/work06-b.jpg', caption: '互动展项 · 对焦黑陶', alt: '玄黑彩梦体验馆光感互动展区' },
+      { src: 'assets/img/work06-c.jpg', caption: '建筑剖面图', alt: '玄黑彩梦体验馆建筑剖面图' }
     ]
   }
 ];
