@@ -398,16 +398,18 @@ ul { margin: 0; padding: 0; }
 .creative-modal-kicker { color: var(--blue); }
 .creative-modal-panel h2 { margin-top: 14px; font-size: clamp(38px, 5vw, 68px); font-weight: 900; line-height: 1; letter-spacing: -.06em; }
 .creative-modal-description { max-width: 760px; margin-top: 22px; font: 700 13px/2 var(--mono); }
-.creative-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 28px 0 0; padding: 0; list-style: none; }
+.creative-points { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-self: start; margin: 28px 0 0; padding: 0; list-style: none; }
 .creative-points li { position: relative; padding: 16px 16px 16px 34px; border: var(--border); background: var(--paper-deep); font: 600 11px/1.8 var(--mono); box-shadow: 3px 3px 0 var(--pink); }
 .creative-points li::before { content: ''; position: absolute; left: 15px; top: 24px; width: 8px; height: 8px; background: var(--blue); border: 1px solid var(--ink); }
-.creative-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 32px; }
+.creative-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; margin-top: 32px; }
 .creative-gallery figure { margin: 0; }
 .creative-gallery img { width: 100%; border: var(--border); background: var(--paper-deep); }
 .creative-gallery figcaption { display: flex; justify-content: space-between; gap: 16px; margin-top: 10px; font: 600 9px var(--mono); letter-spacing: .06em; }
 .creative-gallery.is-poster { grid-template-columns: 1fr; }
 .creative-gallery.is-poster img { max-height: 640px; object-fit: contain; }
-.creative-gallery.is-photography img { aspect-ratio: 4 / 5; object-fit: cover; }
+.creative-gallery.is-photography { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.creative-gallery.is-photography figure { min-width: 0; }
+.creative-gallery.is-photography img { display: block; aspect-ratio: 4 / 5; object-fit: cover; }
 
 .internship-section { background: var(--paper); }
 .experience-layout { display: grid; grid-template-columns: .68fr 1.32fr; gap: clamp(50px, 8vw, 120px); }
@@ -554,7 +556,7 @@ ul { margin: 0; padding: 0; }
   .work-name strong { font-size: 23px; }
   .creative-grid { grid-template-columns: 1fr; }
   .creative-card { min-height: 320px; }
-  .creative-gallery { grid-template-columns: 1fr; }
+  .creative-gallery, .creative-gallery.is-photography { grid-template-columns: 1fr; }
   .creative-points { grid-template-columns: 1fr; }
   .experience-layout { grid-template-columns: 1fr; }
   .experience-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: end; }
