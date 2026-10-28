@@ -409,7 +409,7 @@ ul { margin: 0; padding: 0; }
 .creative-gallery.is-poster img { max-height: 640px; object-fit: contain; }
 .creative-gallery.is-photography { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .creative-gallery.is-photography figure { min-width: 0; }
-.creative-gallery.is-photography img { display: block; aspect-ratio: 4 / 5; object-fit: cover; }
+.creative-gallery.is-photography img { display: block; height: auto; object-fit: contain; }
 
 .internship-section { background: var(--paper); }
 .experience-layout { display: grid; grid-template-columns: .68fr 1.32fr; gap: clamp(50px, 8vw, 120px); }
