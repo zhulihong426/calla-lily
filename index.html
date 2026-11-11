@@ -24,18 +24,34 @@
       <span>ZHU LIHONG<small>PORTFOLIO / 2026</small></span>
     </a>
     <nav class="main-nav" aria-label="主导航">
-      <a href="#about" data-section="about">关于我</a>
-      <a href="#works" data-section="works">作品</a>
-      <a href="#creative" data-section="creative">创作</a>
-      <a href="#internship" data-section="internship">实习</a>
-      <a href="#campus" data-section="campus">在校</a>
-      <a href="#contact" data-section="contact">联系</a>
+      <a href="#about" data-section="about" data-menu="ABOUT" aria-label="关于我">ABOUT</a>
+      <a href="#works" data-section="works" data-menu="WORKS" aria-label="作品">WORKS</a>
+      <a href="#creative" data-section="creative" data-menu="CREATIVE" aria-label="创作">CREATIVE</a>
+      <a href="#internship" data-section="internship" data-menu="INTERNSHIP" aria-label="实习">INTERNSHIP</a>
+      <a href="#campus" data-section="campus" data-menu="CAMPUS" aria-label="在校">CAMPUS</a>
+      <a href="#contact" data-section="contact" data-menu="CONTACT" aria-label="联系">CONTACT</a>
     </nav>
     <span class="header-stamp">HARBIN, CN</span>
   </header>
 
   <main>
     <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="ambient-lights" aria-hidden="true">
+        <i class="ambient-light light-one"></i>
+        <i class="ambient-light light-two"></i>
+        <i class="ambient-light light-three"></i>
+        <i class="ambient-light light-four"></i>
+        <i class="ambient-light light-five"></i>
+      </div>
+      <div class="falling-leaves" aria-hidden="true">
+        <i class="falling-leaf" style="--leaf-x:8%;--leaf-delay:-3s;--leaf-duration:15s;--leaf-drift:80px;--leaf-scale:.8"></i>
+        <i class="falling-leaf" style="--leaf-x:23%;--leaf-delay:-11s;--leaf-duration:19s;--leaf-drift:-65px;--leaf-scale:1.1"></i>
+        <i class="falling-leaf" style="--leaf-x:39%;--leaf-delay:-7s;--leaf-duration:17s;--leaf-drift:95px;--leaf-scale:.65"></i>
+        <i class="falling-leaf" style="--leaf-x:57%;--leaf-delay:-15s;--leaf-duration:22s;--leaf-drift:-90px;--leaf-scale:.9"></i>
+        <i class="falling-leaf" style="--leaf-x:72%;--leaf-delay:-5s;--leaf-duration:18s;--leaf-drift:70px;--leaf-scale:.75"></i>
+        <i class="falling-leaf" style="--leaf-x:87%;--leaf-delay:-13s;--leaf-duration:20s;--leaf-drift:-75px;--leaf-scale:1"></i>
+        <i class="falling-leaf" style="--leaf-x:95%;--leaf-delay:-1s;--leaf-duration:16s;--leaf-drift:-45px;--leaf-scale:.55"></i>
+      </div>
       <div class="hero-shape hero-shape-a" aria-hidden="true"></div>
       <div class="hero-shape hero-shape-b" aria-hidden="true"></div>
       <div class="registration-mark mark-one" aria-hidden="true">+</div>
@@ -43,7 +59,6 @@
       <div class="hero-side-note" aria-hidden="true">SPACE · PEOPLE · STORIES</div>
 
       <div class="hero-inner">
-        <p class="eyebrow hero-eyebrow"><span> independently minded </span> VOL. 01 — 2026</p>
         <h1 id="hero-title" class="hero-title riso-offset" data-text="Welcome to my world.">Welcome to my world.</h1>
         <a class="button button-primary hero-button" href="#about">
           <span>ENTER MY WORLD</span>
@@ -174,21 +189,12 @@
           <p class="section-note">TWO WAYS<br>TO TELL STORIES.</p>
         </header>
 
-        <div class="creative-grid">
-          <button class="creative-card reveal" type="button" data-creative="poster" aria-haspopup="dialog" aria-label="查看海报设计详情">
-            <span class="creative-registration" aria-hidden="true"></span>
-            <span class="creative-label">01 / 02 · CAMPUS EVENTS</span>
-            <h3>POSTER_DESIGN</h3>
-            <p>以鲜明主视觉和清晰的信息层级，为校园活动建立从预热到报名的传播路径。</p>
-            <span class="creative-cta">点击查看详情 ↗</span>
-          </button>
-          <button class="creative-card creative-card-alt reveal" type="button" data-creative="photography" aria-haspopup="dialog" aria-label="查看摄影详情">
-            <span class="creative-registration" aria-hidden="true"></span>
-            <span class="creative-label">02 / 02 · VISUAL NOTES</span>
-            <h3>PHOTOGRAPHY</h3>
-            <p>记录城市夜色、港口日光与传统建筑，在光、影和色彩之间保留现场的呼吸。</p>
-            <span class="creative-cta">点击查看详情 ↗</span>
-          </button>
+        <div class="folder-reel reveal" aria-label="平面与影像文件夹轮播">
+          <div class="folder-reel-head">
+            <span>POSTER &amp; PHOTOGRAPHY / 06 FRAMES</span>
+            <span>HOVER TO PAUSE</span>
+          </div>
+          <div class="folder-window" id="creative-folder-reel"></div>
         </div>
       </div>
     </section>

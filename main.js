@@ -5,6 +5,70 @@ const progressBar = document.querySelector('.scroll-progress span');
 const sections = document.querySelectorAll('main section[id], footer[id]');
 const navLinks = document.querySelectorAll('.main-nav a[data-section]');
 const revealItems = document.querySelectorAll('.reveal');
+const heroEnterButton = document.querySelector('.hero-button');
+
+document.body.classList.add('hero-gated');
+if (heroEnterButton) heroEnterButton.setAttribute('aria-expanded', 'false');
+
+navLinks.forEach((link) => {
+  const word = document.createElement('span');
+  word.className = 'menu-word';
+  word.setAttribute('aria-hidden', 'true');
+  [...link.dataset.menu].forEach((character, index) => {
+    const letter = document.createElement('span');
+    letter.className = 'menu-char';
+    letter.style.setProperty('--char-index', index);
+    letter.textContent = character;
+    word.appendChild(letter);
+  });
+  link.replaceChildren(word);
+  link.classList.add('menu-ready');
+});
+
+heroEnterButton?.addEventListener('click', (event) => {
+  event.preventDefault();
+  if (!document.body.classList.contains('hero-gated')) {
+    document.querySelector('#about')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    return;
+  }
+
+  document.body.classList.remove('hero-gated');
+  heroEnterButton.setAttribute('aria-expanded', 'true');
+  requestAnimationFrame(() => {
+    document.querySelector('#about')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+});
+
+const heroTitle = document.querySelector('.hero-title');
+if (heroTitle) {
+  const heroText = heroTitle.textContent.trim();
+  heroTitle.setAttribute('aria-label', heroText);
+  heroTitle.textContent = '';
+
+  const typedText = document.createElement('span');
+  typedText.className = 'type-text';
+  typedText.setAttribute('aria-hidden', 'true');
+  const typeCursor = document.createElement('span');
+  typeCursor.className = 'type-cursor';
+  typeCursor.setAttribute('aria-hidden', 'true');
+  heroTitle.append(typedText, typeCursor);
+
+  if (reduceMotion) {
+    typedText.textContent = heroText;
+    heroTitle.dataset.text = heroText;
+  } else {
+    let typedIndex = 0;
+    setTimeout(() => {
+      const typingTimer = setInterval(() => {
+        typedIndex += 1;
+        const currentText = heroText.slice(0, typedIndex);
+        typedText.textContent = currentText;
+        heroTitle.dataset.text = currentText;
+        if (typedIndex >= heroText.length) clearInterval(typingTimer);
+      }, 45);
+    }, 300);
+  }
+}
 
 function updateScrollUI() {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -17,10 +81,21 @@ function updateScrollUI() {
   });
   navLinks.forEach((link) => {
     const isActive = link.dataset.section === current;
+    const wasActive = link.classList.contains('active');
     link.classList.toggle('active', isActive);
+    if (isActive && !wasActive && !reduceMotion) {
+      link.classList.remove('is-revealing');
+      void link.offsetWidth;
+      link.classList.add('is-revealing');
+    }
     if (isActive) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
+    else {
+      link.classList.remove('is-revealing');
+      link.removeAttribute('aria-current');
+    }
   });
+
+  document.body.classList.toggle('is-creative-active', current === 'creative');
 }
 
 let scrollTicking = false;
@@ -120,20 +195,140 @@ const creativeWorks = {
   }
 };
 
+function createCreativeFigure(image, index, total, hidden = false) {
+  const figure = document.createElement('figure');
+  if (hidden) figure.setAttribute('aria-hidden', 'true');
+  const img = document.createElement('img');
+  const caption = document.createElement('figcaption');
+  img.src = image.src;
+  img.alt = hidden ? '' : image.alt;
+  img.loading = 'lazy';
+  caption.innerHTML = `<span>${image.caption}</span><span>${String(index + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>`;
+  figure.append(img, caption);
+  return figure;
+}
+
+function buildInfiniteTrack(images) {
+  const track = document.createElement('div');
+  track.className = 'creative-slider-track';
+  const figures = images.map((image, index) => createCreativeFigure(image, index, images.length));
+  figures.forEach((figure) => track.appendChild(figure));
+  figures.forEach((figure) => {
+    const clone = figure.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  });
+  return track;
+}
+
+function createFolderCard(item, index, hidden = false) {
+  const card = document.createElement('button');
+  card.type = 'button';
+  card.className = 'folder-card';
+  card.dataset.creative = item.work;
+  card.style.setProperty('--folder-tilt', `${(index % 3 - 1) * 1.4}deg`);
+  if (hidden) {
+    card.setAttribute('aria-hidden', 'true');
+    card.tabIndex = -1;
+  } else {
+    card.setAttribute('aria-label', `查看${item.image.caption}详情`);
+  }
+
+  const tab = document.createElement('span');
+  tab.className = 'folder-tab';
+  tab.textContent = item.tab;
+  const img = document.createElement('img');
+  img.src = item.image.src;
+  img.alt = hidden ? '' : item.image.alt;
+  img.loading = 'lazy';
+  const caption = document.createElement('span');
+  caption.className = 'folder-caption';
+  caption.innerHTML = `<span>${item.image.caption}</span><span>${String(index + 1).padStart(2, '0')} / 06</span>`;
+  card.append(tab, img, caption);
+  return card;
+}
+
+function buildFolderTrack() {
+  const items = [
+    ...creativeWorks.poster.images.map((image, index) => ({
+      image,
+      work: 'poster',
+      tab: `POSTER / ${String(index + 1).padStart(2, '0')}`
+    })),
+    ...creativeWorks.photography.images.map((image, index) => ({
+      image,
+      work: 'photography',
+      tab: `PHOTO / ${String(index + 3).padStart(2, '0')}`
+    }))
+  ];
+  const track = document.createElement('div');
+  track.className = 'folder-track';
+  const cards = items.map((item, index) => createFolderCard(item, index));
+  cards.forEach((card) => track.appendChild(card));
+  cards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.tabIndex = -1;
+    track.appendChild(clone);
+  });
+  return track;
+}
+
 const creativeCards = document.querySelectorAll('[data-creative]');
 const creativeModal = document.getElementById('creative-modal');
+const creativeModalPanel = creativeModal?.querySelector('.creative-modal-panel');
 const creativeModalKicker = document.getElementById('creative-modal-kicker');
 const creativeModalTitle = document.getElementById('creative-modal-title');
 const creativeModalDescription = document.getElementById('creative-modal-description');
 const creativeModalGallery = document.getElementById('creative-modal-gallery');
 const creativeCloseButton = creativeModal?.querySelector('.creative-close');
+const creativeFolderReel = document.getElementById('creative-folder-reel');
 let creativeTrigger = null;
 
-function openCreativeModal(key) {
+if (creativeFolderReel) {
+  creativeFolderReel.appendChild(buildFolderTrack());
+  creativeFolderReel.addEventListener('click', (event) => {
+    const card = event.target.closest('.folder-card[data-creative]');
+    if (card) openCreativeModal(card.dataset.creative, card);
+  });
+}
+
+function setModalMorph(trigger) {
+  if (!creativeModalPanel) return;
+
+  const triggerRect = trigger?.getBoundingClientRect?.();
+  if (!triggerRect) {
+    creativeModalPanel.style.setProperty('--morph-x', '0px');
+    creativeModalPanel.style.setProperty('--morph-y', '40px');
+    creativeModalPanel.style.setProperty('--morph-scale-x', '.82');
+    creativeModalPanel.style.setProperty('--morph-scale-y', '.82');
+    return;
+  }
+
+  const previousTransform = creativeModalPanel.style.transform;
+  const previousTransition = creativeModalPanel.style.transition;
+  creativeModalPanel.style.transition = 'none';
+  creativeModalPanel.style.transform = 'none';
+  const panelRect = creativeModalPanel.getBoundingClientRect();
+  creativeModalPanel.style.transform = previousTransform;
+  creativeModalPanel.style.transition = previousTransition;
+
+  const scaleX = Math.max(.2, Math.min(1, triggerRect.width / panelRect.width));
+  const scaleY = Math.max(.2, Math.min(1, triggerRect.height / panelRect.height));
+  const translateX = triggerRect.left + triggerRect.width / 2 - (panelRect.left + panelRect.width / 2);
+  const translateY = triggerRect.top + triggerRect.height / 2 - (panelRect.top + panelRect.height / 2);
+
+  creativeModalPanel.style.setProperty('--morph-x', `${translateX}px`);
+  creativeModalPanel.style.setProperty('--morph-y', `${translateY}px`);
+  creativeModalPanel.style.setProperty('--morph-scale-x', `${scaleX}`);
+  creativeModalPanel.style.setProperty('--morph-scale-y', `${scaleY}`);
+}
+
+function openCreativeModal(key, trigger) {
   const work = creativeWorks[key];
   if (!work || !creativeModal || !creativeModalGallery) return;
 
-  creativeTrigger = document.activeElement;
+  creativeTrigger = trigger || document.activeElement;
   creativeModalKicker.textContent = work.kicker;
   creativeModalTitle.textContent = work.title;
   creativeModalDescription.textContent = work.description;
@@ -149,32 +344,37 @@ function openCreativeModal(key) {
   });
   creativeModalGallery.appendChild(points);
 
-  work.images.forEach((image, index) => {
-    const figure = document.createElement('figure');
-    const img = document.createElement('img');
-    const caption = document.createElement('figcaption');
-    img.src = image.src;
-    img.alt = image.alt;
-    img.loading = 'lazy';
-    caption.innerHTML = `<span>${image.caption}</span><span>${String(index + 1).padStart(2, '0')} / ${String(work.images.length).padStart(2, '0')}</span>`;
-    figure.append(img, caption);
-    creativeModalGallery.appendChild(figure);
-  });
+  if (work.layout === 'is-photography') {
+    creativeModalGallery.appendChild(buildInfiniteTrack(work.images));
+    creativeModalGallery.classList.add('is-infinite');
+  } else {
+    work.images.forEach((image, index) => creativeModalGallery.appendChild(createCreativeFigure(image, index, work.images.length)));
+    creativeModalGallery.classList.remove('is-infinite');
+  }
 
   creativeModal.hidden = false;
+  creativeModal.classList.remove('is-open', 'is-closing');
+  setModalMorph(trigger);
   document.body.classList.add('creative-modal-open');
+  requestAnimationFrame(() => creativeModal.classList.add('is-open'));
   creativeCloseButton?.focus();
 }
 
 function closeCreativeModal() {
   if (!creativeModal || creativeModal.hidden) return;
-  creativeModal.hidden = true;
-  document.body.classList.remove('creative-modal-open');
-  if (creativeTrigger instanceof HTMLElement) creativeTrigger.focus();
+  creativeModal.classList.remove('is-open');
+  creativeModal.classList.add('is-closing');
+  setTimeout(() => {
+    creativeModal.hidden = true;
+    creativeModal.classList.remove('is-closing');
+    document.body.classList.remove('creative-modal-open');
+    if (creativeTrigger instanceof HTMLElement) creativeTrigger.focus();
+    creativeTrigger = null;
+  }, 320);
 }
 
 creativeCards.forEach((card) => {
-  card.addEventListener('click', () => openCreativeModal(card.dataset.creative));
+  card.addEventListener('click', () => openCreativeModal(card.dataset.creative, card));
 });
 
 creativeModal?.querySelectorAll('[data-creative-close]').forEach((element) => {
